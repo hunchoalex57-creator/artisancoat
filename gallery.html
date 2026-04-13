@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Artisan Coat Surface Resurfacing — GTA Before & After Photos</title>
+  <meta name="description" content="Browse before and after photos of Artisan Coat's surface resurfacing work across the GTA — Jewelstone porches, pool decks, patios, and microcement floors.">
+  <link rel="canonical" href="https://artisancoat.ca/gallery.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .gallery-filter {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 48px;
+    }
+    .filter-btn {
+      padding: 10px 24px;
+      border: 1.5px solid var(--light-gray);
+      background: transparent;
+      color: var(--charcoal);
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--white);
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 3px;
+      cursor: pointer;
+      aspect-ratio: 4/3;
+      background: #252525;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.04);
+    }
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+      display: flex;
+      align-items: flex-end;
+      padding: 16px;
+    }
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+    .gallery-overlay-label {
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .gallery-item.hidden {
+      display: none;
+    }
+    .ba-tag {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: var(--gold);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 2px;
+    }
+    .gallery-empty {
+      display: none;
+      text-align: center;
+      padding: 80px 20px;
+      color: var(--mid-gray);
+      font-size: 1rem;
+      grid-column: 1 / -1;
+    }
+    @media (max-width: 900px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 540px) {
+      .gallery-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+      .filter-btn { padding: 8px 16px; font-size: 0.78rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.png" alt="Artisan Coat" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+      <span class="nav-logo-text" style="display:none">Artisan <span>Coat</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn-gold nav-cta">Free Estimate</a>
+    <button class="nav-toggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="jewelstone.html">Jewelstone</a>
+    <a href="microcement.html">Microcement</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="tel:4168898273" class="btn btn-gold">Call 416-889-8273</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero hero-sub-page" style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.5)), url('images/jewelstone-herringbone-porch-toronto-hero.jpg'); background-color: var(--dark);">
+  <div class="hero-content">
+    <span class="hero-eyebrow">Our Work</span>
+    <h1>Results That<br><em>Speak for Themselves.</em></h1>
+    <p class="hero-sub">Every photo below is a real project completed by our team across the Greater Toronto Area. Browse by category and see what's possible — without demolition.</p>
+  </div>
+</section>
+
+<!-- SLOGAN STRIP -->
+<div class="slogan-strip">
+  <p>"Don't Replace It — Resurface It. Save the Bank."</p>
+</div>
+
+<!-- GALLERY -->
+<section class="section">
+  <div class="container">
+
+    <!-- FILTER BUTTONS -->
+    <div class="gallery-filter">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="jewelstone">Jewelstone</button>
+      <button class="filter-btn" data-filter="pool">Pool Deck</button>
+      <button class="filter-btn" data-filter="porch">Porch &amp; Patio</button>
+      <button class="filter-btn" data-filter="microcement">Microcement</button>
+    </div>
+
+    <!-- GRID -->
+    <div class="gallery-grid" id="galleryGrid">
+
+      <!-- JEWELSTONE — BEFORE/AFTER PAIRS -->
+      <div class="gallery-item" data-cat="jewelstone" data-label="Jewelstone — Before">
+        <img src="images/cracked-porch-before-resurfacing-toronto.jpg" alt="Cracked concrete porch before Jewelstone resurfacing GTA" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#2a2a2a,#3a3a3a)'">
+        <div class="ba-tag">Before</div>
+        <div class="gallery-overlay"><span class="gallery-overlay-label">Jewelstone — Before</span></div>
+      </div>
+      <div class="gallery-item" data-cat="jewelstone" data-label="Jewelstone — After">
+        <img src="images/jewelstone-porch-after-resurfacing-toronto.jpg" alt="Jewelstone resurfaced porch after transformation GTA" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#2a2a2a,#3a3a3a)'">
+        <div class="ba-tag" style="background:#2a7a2a;">After</div>
+        <div class="gallery-overlay"><span class="gallery-overlay-label">Jewelstone — After</span></div>
+      </div>
+
+      <div class="gallery-item" data-cat="jewelstone" data-label="Staircase — Before">
+        <img src="images/worn-concrete-steps-before-jewelstone.jpg" alt="Worn concrete stairs before Jewelstone coating" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#2a2a2a,#3a3a3a)'">
+        <div class="ba-tag">Before</div>
+        <div class="gallery-overlay"><span class="gallery-overlay-label">Staircase — Before</span></div>
+      </div>
+      <div class="gallery-item" data-cat="jewelstone" data-label="Staircase — After">
+        <img src="images/jewelstone-stamped-steps-after-toronto.jpg" alt="Jewelstone finished grand staircase GTA" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#2a2a2a,#3a3a3a)'">
+        <div class="ba-tag" style="background:#2a7a2a;">After</div>
+        <div class="gallery-overlay"><span class="gallery-overlay-label">Staircase — After</span></div>
+      </div>
+
+      <!-- JEWELSTONE — COMPLETED PROJECTS -->
+      <div class="gallery-item" data-cat="jewelstone porch" data-label="Grey Stone Porch">
+        <img src="images/jewelstone-herringbone-porch-toronto.jpg" alt="Jewelstone herringbone porch resurfacing Toronto GTA" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#2a2a2a,#3a3a3a)'">
+        <div class="gallery-overlay"><span class="gallery-overlay-label">Grey Stone Grand Staircase</span></div>
+      </div>
+      <div class="gallery-item" data-cat="jewelstone porch" data-label="Terracotta Stairs">
+        <img src="images/terracotta-jewelstone-stairs-toronto.jpg" alt="Terracotta Jewelstone staircase resurfacing Toronto" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#2a2a2a,#3a3a3a)'">
+        <div class="gallery-overlay"><span class="gallery-overlay-label">Terracotta Staircase</span></div>
+      </div>
+      <div class="gallery-item" data-cat="jewelstone porch" data-label="Chocolate Brown Porch">
+        <img src="images/jewelstone-wide-light-steps-toronto.jpg" alt="Jewelstone wide light grey steps resurfacing Toronto" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#2a2a2a,#3a3a3a)'">
+        <div class="gallery-overlay"><span class="gallery-overlay-label">Chocolate Brown Porch</span></div>
+      </div>
+      <div class="gallery-item" data-cat="jewelstone porch" data-label="Stamped Porch Pattern">
+        <img src="images/jewelstone-grey-residential-steps-toronto.jpg" alt="Jewelstone grey stamped residential steps Toronto GTA" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#2a2a2a,#3a3a3a)'">
+        <div class="gallery-overlay"><span class="gallery-overlay-label">Stamped Stone Porch</span></div>
+      </div>
+
+      <!-- POOL DECK -->
+      <div class="gallery-item" data-cat="pool" data-label="Pool Deck — Before">
+        <img src="images/pool-deck-before-resurfacing-toronto.jpg" alt="Cracked pool deck before resurfacing GTA" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#2a2a2a,#3a3a3a)'">
+        <div class="ba-tag">Before</div>
+        <div class="gallery-overlay"><span class="gallery-overlay-label">Pool Deck — Before</span></div>
+      </div>
+      <div class="gallery-item" data-cat="pool" data-label="Pool Deck — After">
+        <img src="images/pool-deck-after-resurfacing-toronto.jpg" alt="Resurfaced pool deck after Jewelstone coating Toronto" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#2a2a2a,#3a3a3a)'">
+        <div class="ba-tag" style="background:#2a7a2a;">After</div>
+        <div class="gallery-overlay"><span class="gallery-overlay-label">Pool Deck — After</span></div>
+      </div>
+      <div class="gallery-item" data-cat="pool" data-label="Pool Surround">
+        <img src="images/pool-surround-resurfacing-gta-toronto.jpg" alt="Full pool surround Jewelstone resurfacing GTA" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#2a2a2a,#3a3a3a)'">
+        <div class="gallery-overlay"><span class="gallery-overlay-label">Full Pool Surround</span></div>
+      </div>
+
+      <!-- MICROCEMENT — COMMERCIAL -->
+      <div class="gallery-item" data-cat="microcement" data-label="Commercial Boutique Floor">
+        <img src="images/microcement-commercial-venue-toronto.jpg" alt="Microcement commercial boutique floor Toronto" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#2a2a2a,#3a3a3a)'">
+        <div class="gallery-overlay"><span class="gallery-overlay-label">Commercial Boutique Floor</span></div>
+      </div>
+      <div class="gallery-item" data-cat="microcement" data-label="Large Venue — Before">
+        <img src="images/tile-floor-before-microcement-toronto.jpg" alt="Old terracotta tile floor before microcement overlay Toronto" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#2a2a2a,#3a3a3a)'">
+        <div class="ba-tag">Before</div>
+        <div class="gallery-overlay"><span class="gallery-overlay-label">Venue Floor — Before</span></div>
+      </div>
+      <div class="gallery-item" data-cat="microcement" data-label="Large Venue — After">
+        <img src="images/cream-microcement-floor-after-toronto.jpg" alt="Cream seamless microcement floor after installation Toronto" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#2a2a2a,#3a3a3a)'">
+        <div class="ba-tag" style="background:#2a7a2a;">After</div>
+        <div class="gallery-overlay"><span class="gallery-overlay-label">Venue Floor — After</span></div>
+      </div>
+
+      <!-- MICROCEMENT — RESIDENTIAL -->
+      <div class="gallery-item" data-cat="microcement" data-label="Luxury Home Floor">
+        <img src="images/seamless-microcement-floor-toronto.jpg" alt="Luxury seamless microcement open-plan floor Toronto" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#2a2a2a,#3a3a3a)'">
+        <div class="gallery-overlay"><span class="gallery-overlay-label">Luxury Home Floor</span></div>
+      </div>
+      <div class="gallery-item" data-cat="microcement" data-label="Stairs with Glass Railing">
+        <img src="images/microcement-stairs-glass-railing-toronto.jpg" alt="Microcement stairs with glass railing exposed brick Toronto" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#2a2a2a,#3a3a3a)'">
+        <div class="gallery-overlay"><span class="gallery-overlay-label">Stairs with Glass Railing</span></div>
+      </div>
+      <div class="gallery-item" data-cat="microcement" data-label="Tile-to-Microcement — Before">
+        <img src="images/tile-floor-before-microcement-toronto.jpg" alt="Old terracotta tile floor before microcement resurfacing Toronto" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#2a2a2a,#3a3a3a)'">
+        <div class="ba-tag">Before</div>
+        <div class="gallery-overlay"><span class="gallery-overlay-label">Over Tile — Before</span></div>
+      </div>
+      <div class="gallery-item" data-cat="microcement" data-label="Tile-to-Microcement — After">
+        <img src="images/cream-microcement-floor-after-toronto.jpg" alt="Seamless cream microcement floor installed over existing tiles Toronto" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#2a2a2a,#3a3a3a)'">
+        <div class="ba-tag" style="background:#2a7a2a;">After</div>
+        <div class="gallery-overlay"><span class="gallery-overlay-label">Over Tile — After</span></div>
+      </div>
+      <div class="gallery-item" data-cat="microcement" data-label="Fireplace Feature Wall">
+        <img src="images/microcement-bathroom-wall-mirror-toronto.jpg" alt="Microcement bathroom feature wall with round mirror Toronto" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#2a2a2a,#3a3a3a)'">
+        <div class="gallery-overlay"><span class="gallery-overlay-label">Fireplace Feature Wall</span></div>
+      </div>
+      <div class="gallery-item" data-cat="microcement" data-label="Large Residential Floor">
+        <img src="images/microcement-commercial-venue-toronto.jpg" alt="Large commercial microcement floor installation Toronto before and after" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#2a2a2a,#3a3a3a)'">
+        <div class="gallery-overlay"><span class="gallery-overlay-label">Open-Plan Residential Floor</span></div>
+      </div>
+      <div class="gallery-item" data-cat="microcement" data-label="Bathroom Walls">
+        <img src="images/microcement-bathroom-wall-mirror-toronto.jpg" alt="Seamless microcement bathroom walls with designer mirror Toronto" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#2a2a2a,#3a3a3a)'">
+        <div class="gallery-overlay"><span class="gallery-overlay-label">Bathroom Walls</span></div>
+      </div>
+      <div class="gallery-item" data-cat="microcement" data-label="Kitchen Backsplash">
+        <img src="images/microcement-kitchen-backsplash-toronto.jpg" alt="Microcement kitchen backsplash seamless finish" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#2a2a2a,#3a3a3a)'">
+        <div class="gallery-overlay"><span class="gallery-overlay-label">Kitchen Backsplash</span></div>
+      </div>
+      <div class="gallery-item" data-cat="microcement" data-label="Craftsman at Work">
+        <img src="images/microcement-craftsman-installation-toronto.jpg" alt="Artisan Coat craftsman applying microcement by hand" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#2a2a2a,#3a3a3a)'">
+        <div class="gallery-overlay"><span class="gallery-overlay-label">Craftsman at Work</span></div>
+      </div>
+
+    </div>
+    <!-- /gallery-grid -->
+
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<div class="cta-banner">
+  <div class="cta-inner">
+    <h2>Like What You See?<br>Let's Talk About Your Surface.</h2>
+    <p>Book a free, no-obligation on-site estimate. We'll assess your surface, answer your questions, and give you a clear, honest price — usually within 48 hours.</p>
+    <div class="cta-buttons">
+      <a href="contact.html" class="btn btn-gold">Book Your Free Estimate</a>
+      <a href="tel:4168898273" class="btn btn-outline-white">Call 416-889-8273</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="images/logo.png" alt="Artisan Coat" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <div class="footer-brand-text" style="display:none">Artisan <span>Coat</span></div>
+        <p class="footer-tagline">Surface Design — Interior & Exterior<br>Serving the Greater Toronto Area.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn" aria-label="Instagram">ig</a>
+          <a href="#" class="social-btn" aria-label="Facebook">fb</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Services</div>
+        <ul class="footer-links">
+          <li><a href="jewelstone.html">Jewelstone Resurfacing</a></li>
+          <li><a href="microcement.html">Microcement</a></li>
+          <li><a href="services.html">Pool Deck Resurfacing</a></li>
+          <li><a href="services.html">Porch &amp; Patio</a></li>
+          <li><a href="services.html">Concrete Restoration</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Company</div>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Free Estimate</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Contact</div>
+        <ul class="footer-contact-list">
+          <li class="footer-contact-item"><span class="fi">📞</span><a href="tel:4168898273">416-889-8273</a></li>
+          <li class="footer-contact-item"><span class="fi">💬</span><a href="https://wa.me/14168898273" target="_blank" rel="noopener">WhatsApp Us</a></li>
+          <li class="footer-contact-item"><span class="fi">✉️</span><a href="mailto:artisancoat@gmail.com">artisancoat@gmail.com</a></li>
+          <li class="footer-contact-item"><span class="fi">📍</span><span>Serving Greater Toronto Area</span></li>
+          <li class="footer-contact-item"><span class="fi">🕐</span><span>Mon–Sat, 8:00 AM – 6:00 PM</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2025 Artisan Coat. All rights reserved. | Greater Toronto Area</div>
+</footer>
+
+<a href="https://wa.me/14168898273" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<div class="mobile-cta-bar">
+  <a href="tel:4168898273" class="mcb-call">📞 Call Now</a>
+  <a href="https://wa.me/14168898273" class="mcb-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+<div class="lightbox"><span class="lightbox-close">&times;</span><img src="" alt=""></div>
+<script src="js/main.js"></script>
+</body>
+</html>

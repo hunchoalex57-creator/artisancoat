@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Artisan Coat | Free Estimate — GTA Surface Resurfacing</title>
+  <meta name="description" content="Get a free, no-obligation estimate for surface resurfacing in the GTA. Call 416-889-8273, WhatsApp, or fill out our contact form and we'll respond within 24 hours.">
+  <link rel="canonical" href="https://artisancoat.ca/contact.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 64px;
+      align-items: start;
+    }
+    .contact-form-wrap {
+      background: var(--white);
+      border-radius: 4px;
+      padding: 48px;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+    }
+    .contact-form-wrap h2 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .contact-form-wrap p.sub {
+      color: var(--mid-gray);
+      font-size: 0.9rem;
+      margin-bottom: 32px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      margin-bottom: 7px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid var(--light-gray);
+      border-radius: 2px;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--charcoal);
+      background: var(--off-white);
+      transition: border-color 0.2s;
+      box-sizing: border-box;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--gold);
+    }
+    .form-group textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .form-submit-btn {
+      width: 100%;
+      padding: 16px;
+      background: var(--gold);
+      color: #fff;
+      border: none;
+      border-radius: 2px;
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      margin-top: 8px;
+    }
+    .form-submit-btn:hover {
+      background: #a8801f;
+      transform: translateY(-1px);
+    }
+    .form-note {
+      font-size: 0.78rem;
+      color: var(--mid-gray);
+      text-align: center;
+      margin-top: 12px;
+    }
+    /* Sidebar */
+    .contact-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .contact-card {
+      background: var(--white);
+      border-radius: 4px;
+      padding: 28px 28px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    }
+    .contact-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--light-gray);
+    }
+    .contact-method {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--light-gray);
+      text-decoration: none;
+      color: var(--charcoal);
+      transition: color 0.2s;
+    }
+    .contact-method:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .contact-method:hover { color: var(--gold); }
+    .contact-method-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--off-white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .contact-method-info strong {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .contact-method-info span {
+      font-size: 0.8rem;
+      color: var(--mid-gray);
+    }
+    .service-area-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 16px;
+    }
+    .service-area-list li {
+      font-size: 0.83rem;
+      color: var(--mid-gray);
+      padding: 3px 0;
+    }
+    .service-area-list li::before {
+      content: "✓ ";
+      color: var(--gold);
+      font-weight: 700;
+    }
+    .hours-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .hours-list li {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.83rem;
+      padding: 6px 0;
+      border-bottom: 1px solid var(--light-gray);
+      color: var(--mid-gray);
+    }
+    .hours-list li:last-child { border-bottom: none; }
+    .hours-list li strong { color: var(--charcoal); }
+    /* Success state */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 48px 24px;
+    }
+    .form-success-icon {
+      font-size: 3rem;
+      margin-bottom: 16px;
+    }
+    .form-success h3 {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+    .form-success p { color: var(--mid-gray); }
+    @media (max-width: 900px) {
+      .contact-layout { grid-template-columns: 1fr; gap: 40px; }
+      .contact-form-wrap { padding: 32px 24px; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.png" alt="Artisan Coat" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+      <span class="nav-logo-text" style="display:none">Artisan <span>Coat</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn-gold nav-cta">Free Estimate</a>
+    <button class="nav-toggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="jewelstone.html">Jewelstone</a>
+    <a href="microcement.html">Microcement</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="tel:4168898273" class="btn btn-gold">Call 416-889-8273</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero hero-sub-page" style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.5)), url('images/artisan-coat-contact-toronto-gta.jpg'); background-color: var(--dark);">
+  <div class="hero-content">
+    <span class="hero-eyebrow">Get In Touch</span>
+    <h1>Your Free Estimate<br>Starts <em>Here.</em></h1>
+    <p class="hero-sub">No pressure. No obligation. Just an honest assessment of your surface and a clear price — from a team that's been doing this for over 20 years.</p>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="section-alt">
+  <div class="container">
+    <div class="contact-layout">
+
+      <!-- FORM -->
+      <div class="contact-form-wrap">
+        <h2>Book a Free Estimate</h2>
+        <p class="sub">Fill out the form and we'll get back to you within 24 hours — usually same day.</p>
+
+        <form action="https://api.web3forms.com/submit" method="POST" id="estimateForm">
+          <!-- Web3Forms access key — get yours free at web3forms.com -->
+          <input type="hidden" name="access_key" value="105e448d-2f0a-4eed-a4f1-981b81fd10ee">
+          <input type="hidden" name="subject" value="New Estimate Request — Artisan Coat">
+          <input type="hidden" name="from_name" value="Artisan Coat Website">
+          <input type="hidden" name="redirect" value="https://artisancoat.ca/contact.html?success=true">
+          <!-- Spam protection -->
+          <input type="checkbox" name="botcheck" style="display:none">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name *</label>
+              <input type="text" id="fname" name="first_name" required placeholder="Jane">
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name *</label>
+              <input type="text" id="lname" name="last_name" required placeholder="Smith">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="416-555-0123">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com">
+          </div>
+
+          <div class="form-group">
+            <label for="city">Your City / Neighbourhood *</label>
+            <input type="text" id="city" name="city" required placeholder="e.g. Scarborough, North York, Mississauga">
+          </div>
+
+          <div class="form-group">
+            <label for="service">Service Interested In *</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Select a service…</option>
+              <option value="Jewelstone Resurfacing">Jewelstone Resurfacing</option>
+              <option value="Microcement">Microcement</option>
+              <option value="Pool Deck Resurfacing">Pool Deck Resurfacing</option>
+              <option value="Porch & Patio Restoration">Porch &amp; Patio Restoration</option>
+              <option value="Concrete Restoration">Concrete Restoration</option>
+              <option value="Not Sure — Need Advice">Not Sure — Need Advice</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Tell Us About Your Surface</label>
+            <textarea id="message" name="message" placeholder="e.g. Cracked concrete porch, about 200 sq ft. Looking to resurface without replacement. Had it 15 years."></textarea>
+          </div>
+
+          <button type="submit" class="form-submit-btn">Send My Estimate Request</button>
+          <p class="form-note">We typically respond within a few hours. For urgent inquiries, call or WhatsApp us directly.</p>
+        </form>
+
+        <!-- Success message (shown when ?success=true in URL) -->
+        <div class="form-success" id="formSuccess">
+          <div class="form-success-icon">✅</div>
+          <h3>We've Got Your Request!</h3>
+          <p>Thank you — we'll be in touch within 24 hours to arrange your free on-site estimate.<br><br>In the meantime, feel free to <a href="tel:4168898273" style="color:var(--gold)">call us at 416-889-8273</a> if you'd like to speak with someone right away.</p>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="contact-sidebar">
+
+        <!-- Direct Contact -->
+        <div class="contact-card">
+          <h3>Reach Us Directly</h3>
+          <a href="tel:4168898273" class="contact-method">
+            <div class="contact-method-icon">📞</div>
+            <div class="contact-method-info">
+              <strong>416-889-8273</strong>
+              <span>Call us Mon–Sat, 8am–6pm</span>
+            </div>
+          </a>
+          <a href="https://wa.me/14168898273" class="contact-method" target="_blank" rel="noopener">
+            <div class="contact-method-icon">💬</div>
+            <div class="contact-method-info">
+              <strong>WhatsApp Us</strong>
+              <span>Quick replies — send photos of your surface</span>
+            </div>
+          </a>
+          <a href="mailto:artisancoat@gmail.com" class="contact-method">
+            <div class="contact-method-icon">✉️</div>
+            <div class="contact-method-info">
+              <strong>artisancoat@gmail.com</strong>
+              <span>We respond within 24 hours</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Service Area -->
+        <div class="contact-card">
+          <h3>Service Area</h3>
+          <p style="font-size:0.83rem; color:var(--mid-gray); margin-bottom:16px;">We serve homeowners and businesses across the Greater Toronto Area, including:</p>
+          <ul class="service-area-list">
+            <li>Toronto</li>
+            <li>Scarborough</li>
+            <li>North York</li>
+            <li>Etobicoke</li>
+            <li>Mississauga</li>
+            <li>Brampton</li>
+            <li>Oakville</li>
+            <li>Vaughan</li>
+            <li>Richmond Hill</li>
+            <li>Markham</li>
+            <li>Pickering</li>
+            <li>Ajax</li>
+          </ul>
+          <p style="font-size:0.78rem; color:var(--mid-gray); margin-top:14px;">Not sure if we cover your area? Call or WhatsApp — we'll let you know.</p>
+        </div>
+
+        <!-- Hours -->
+        <div class="contact-card">
+          <h3>Business Hours</h3>
+          <ul class="hours-list">
+            <li><strong>Monday</strong><span>8:00 AM – 6:00 PM</span></li>
+            <li><strong>Tuesday</strong><span>8:00 AM – 6:00 PM</span></li>
+            <li><strong>Wednesday</strong><span>8:00 AM – 6:00 PM</span></li>
+            <li><strong>Thursday</strong><span>8:00 AM – 6:00 PM</span></li>
+            <li><strong>Friday</strong><span>8:00 AM – 6:00 PM</span></li>
+            <li><strong>Saturday</strong><span>8:00 AM – 6:00 PM</span></li>
+            <li><strong>Sunday</strong><span>Closed</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY ESTIMATE STRIP -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">What to Expect</span>
+      <h2 class="section-title">How the Free Estimate Works</h2>
+    </div>
+    <div class="process-steps" style="display:grid; grid-template-columns: repeat(4,1fr); gap:32px; margin-top:48px;">
+      <div style="text-align:center;">
+        <div style="width:56px; height:56px; background:var(--gold); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--font-heading); font-size:1.4rem; font-weight:700; color:#fff; margin:0 auto 16px;">1</div>
+        <h4 style="font-family:var(--font-heading); font-size:1.1rem; font-weight:600; margin-bottom:8px;">You Reach Out</h4>
+        <p style="font-size:0.85rem; color:var(--mid-gray); line-height:1.7;">Call, WhatsApp, or fill out the form. Tell us a bit about your surface and your goals.</p>
+      </div>
+      <div style="text-align:center;">
+        <div style="width:56px; height:56px; background:var(--gold); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--font-heading); font-size:1.4rem; font-weight:700; color:#fff; margin:0 auto 16px;">2</div>
+        <h4 style="font-family:var(--font-heading); font-size:1.1rem; font-weight:600; margin-bottom:8px;">We Schedule a Visit</h4>
+        <p style="font-size:0.85rem; color:var(--mid-gray); line-height:1.7;">We arrange a convenient time to come to your property — no rush, no pressure.</p>
+      </div>
+      <div style="text-align:center;">
+        <div style="width:56px; height:56px; background:var(--gold); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--font-heading); font-size:1.4rem; font-weight:700; color:#fff; margin:0 auto 16px;">3</div>
+        <h4 style="font-family:var(--font-heading); font-size:1.1rem; font-weight:600; margin-bottom:8px;">We Assess &amp; Recommend</h4>
+        <p style="font-size:0.85rem; color:var(--mid-gray); line-height:1.7;">We look at your surface, explain our recommendation honestly, and answer any questions.</p>
+      </div>
+      <div style="text-align:center;">
+        <div style="width:56px; height:56px; background:var(--gold); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--font-heading); font-size:1.4rem; font-weight:700; color:#fff; margin:0 auto 16px;">4</div>
+        <h4 style="font-family:var(--font-heading); font-size:1.1rem; font-weight:600; margin-bottom:8px;">You Get a Clear Price</h4>
+        <p style="font-size:0.85rem; color:var(--mid-gray); line-height:1.7;">A written quote with no hidden fees. You decide if you want to move forward — zero obligation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="images/logo.png" alt="Artisan Coat" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <div class="footer-brand-text" style="display:none">Artisan <span>Coat</span></div>
+        <p class="footer-tagline">Surface Design — Interior & Exterior<br>Serving the Greater Toronto Area.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn" aria-label="Instagram">ig</a>
+          <a href="#" class="social-btn" aria-label="Facebook">fb</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Services</div>
+        <ul class="footer-links">
+          <li><a href="jewelstone.html">Jewelstone Resurfacing</a></li>
+          <li><a href="microcement.html">Microcement</a></li>
+          <li><a href="services.html">Pool Deck Resurfacing</a></li>
+          <li><a href="services.html">Porch &amp; Patio</a></li>
+          <li><a href="services.html">Concrete Restoration</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Company</div>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Free Estimate</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Contact</div>
+        <ul class="footer-contact-list">
+          <li class="footer-contact-item"><span class="fi">📞</span><a href="tel:4168898273">416-889-8273</a></li>
+          <li class="footer-contact-item"><span class="fi">💬</span><a href="https://wa.me/14168898273" target="_blank" rel="noopener">WhatsApp Us</a></li>
+          <li class="footer-contact-item"><span class="fi">✉️</span><a href="mailto:artisancoat@gmail.com">artisancoat@gmail.com</a></li>
+          <li class="footer-contact-item"><span class="fi">📍</span><span>Serving Greater Toronto Area</span></li>
+          <li class="footer-contact-item"><span class="fi">🕐</span><span>Mon–Sat, 8:00 AM – 6:00 PM</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2025 Artisan Coat. All rights reserved. | Greater Toronto Area</div>
+</footer>
+
+<a href="https://wa.me/14168898273" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<div class="mobile-cta-bar">
+  <a href="tel:4168898273" class="mcb-call">📞 Call Now</a>
+  <a href="https://wa.me/14168898273" class="mcb-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+<div class="lightbox"><span class="lightbox-close">&times;</span><img src="" alt=""></div>
+<script src="js/main.js"></script>
+<script>
+  // Show success message if redirected back with ?success=true
+  if (new URLSearchParams(window.location.search).get('success') === 'true') {
+    document.getElementById('estimateForm').style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+    window.scrollTo({ top: document.getElementById('formSuccess').offsetTop - 100, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>
