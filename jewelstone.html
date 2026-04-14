@@ -353,5 +353,17 @@
 </div>
 <div class="lightbox"><span class="lightbox-close">&times;</span><img src="" alt=""></div>
 <script src="js/main.js"></script>
+
+<!-- Scroll to Top -->
+<button class="scroll-top" id="scrollTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script>
+  const btn = document.getElementById('scrollTop');
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('visible', window.scrollY > 400);
+  });
+  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+</script>
 </body>
 </html>
