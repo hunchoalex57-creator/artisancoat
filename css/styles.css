@@ -543,7 +543,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 /* ── SCROLL TO TOP ───────────────────────────────────────── */
 .scroll-top {
   position: fixed;
-  bottom: 92px;
+  bottom: 100px;
   right: 32px;
   width: 40px;
   height: 40px;
