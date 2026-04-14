@@ -530,6 +530,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   .props-grid { grid-template-columns: repeat(2, 1fr); }
   .mobile-cta-bar { display: flex; }
   .wa-float { bottom: 80px; }
+  .scroll-top { bottom: 144px; right: 32px; }
   .about-stats { grid-template-columns: repeat(3, 1fr); }
 }
 @media (max-width: 480px) {
@@ -542,8 +543,8 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 /* ── SCROLL TO TOP ───────────────────────────────────────── */
 .scroll-top {
   position: fixed;
-  bottom: 32px;
-  right: 28px;
+  bottom: 92px;
+  right: 32px;
   width: 40px;
   height: 40px;
   background: var(--dark);
