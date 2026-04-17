@@ -135,19 +135,34 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   position: relative; z-index: 1;
   max-width: 780px; padding: 130px 24px 80px; margin: 0 auto;
 }
+/* Frosted backdrop behind hero text — lets image show while keeping text readable */
+.hero-content::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.68) 0%, rgba(0,0,0,0.52) 60%, rgba(0,0,0,0.20) 100%);
+  border-radius: 4px;
+  z-index: -1;
+  margin: -28px -32px;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
 .hero-eyebrow {
   display: inline-block; font-size: 0.72rem; font-weight: 600;
   letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.9), 0 0 24px rgba(0,0,0,0.7);
 }
 .hero h1 {
   font-family: var(--font-heading);
   font-size: clamp(2.8rem, 6vw, 4.8rem);
   font-weight: 600; line-height: 1.08; color: var(--white); margin-bottom: 24px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.95), 0 4px 32px rgba(0,0,0,0.75), 0 1px 3px rgba(0,0,0,1);
 }
-.hero h1 em { font-style: italic; color: var(--gold); }
+.hero h1 em { font-style: italic; color: var(--gold); text-shadow: 0 2px 12px rgba(0,0,0,0.95), 0 4px 32px rgba(0,0,0,0.6); }
 .hero-sub {
   font-size: clamp(1rem, 2vw, 1.18rem);
-  color: rgba(255,255,255,0.82); max-width: 580px; margin-bottom: 40px; line-height: 1.75;
+  color: rgba(255,255,255,0.95); max-width: 580px; margin-bottom: 40px; line-height: 1.75;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.95), 0 2px 20px rgba(0,0,0,0.80);
 }
 .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
 .hero-sub-page { min-height: 58vh; }
