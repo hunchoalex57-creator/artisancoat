@@ -135,18 +135,6 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   position: relative; z-index: 1;
   max-width: 780px; padding: 130px 24px 80px; margin: 0 auto;
 }
-/* Frosted backdrop behind hero text — lets image show while keeping text readable */
-.hero-content::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(0,0,0,0.68) 0%, rgba(0,0,0,0.52) 60%, rgba(0,0,0,0.20) 100%);
-  border-radius: 4px;
-  z-index: -1;
-  margin: -28px -32px;
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-}
 .hero-eyebrow {
   display: inline-block; font-size: 0.72rem; font-weight: 600;
   letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px;
