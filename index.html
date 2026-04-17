@@ -131,40 +131,6 @@
   <p>Cracked? Worn? We Fix It. &nbsp;|&nbsp; From Damaged to Designer Finish.</p>
 </div>
 
-<!-- ── CREDENTIALS STATS ───────────────────────────────────── -->
-<section class="section-dark" aria-label="Artisan Coat credentials" style="padding: 0 0 0 0; background: #0f0f0f;">
-  <div class="container" style="padding-top:0; padding-bottom:0;">
-    <div class="stats-band" id="stats-band" style="border-radius:0; border-left:none; border-right:none; border-top:none; margin:0;">
-      <div class="stats-band-inner">
-        <div class="stat-block">
-          <div class="stat-num-wrap">
-            <span class="stat-count" data-target="20">0</span><span class="stat-suffix">+</span>
-          </div>
-          <div class="stat-label">Years of GTA Experience</div>
-        </div>
-        <div class="stat-block">
-          <div class="stat-num-wrap">
-            <span class="stat-count" data-target="500">0</span><span class="stat-suffix">+</span>
-          </div>
-          <div class="stat-label">Homes Transformed</div>
-        </div>
-        <div class="stat-block">
-          <div class="stat-num-wrap">
-            <span class="stat-count" data-target="5">0</span><span class="stat-suffix">★</span>
-          </div>
-          <div class="stat-label">Average Client Rating</div>
-        </div>
-        <div class="stat-block">
-          <div class="stat-num-wrap">
-            <span class="stat-count" data-target="3">0</span><span class="stat-suffix">yr</span>
-          </div>
-          <div class="stat-label">Workmanship Warranty</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ── SERVICES OVERVIEW ───────────────────────────────────── -->
 <section class="section-alt" aria-labelledby="services-heading">
   <div class="container">
@@ -824,38 +790,5 @@
   btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 </script>
 
-<!-- Count-up animation for Credentials section -->
-<script>
-(function () {
-  function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
-  function animateCounter(el) {
-    var target = parseInt(el.getAttribute('data-target'), 10);
-    var duration = target >= 100 ? 1600 : 1200;
-    var startTime = null;
-    function step(timestamp) {
-      if (!startTime) startTime = timestamp;
-      var elapsed = timestamp - startTime;
-      var progress = Math.min(elapsed / duration, 1);
-      el.textContent = Math.round(easeOutCubic(progress) * target);
-      if (progress < 1) requestAnimationFrame(step);
-      else el.textContent = target;
-    }
-    requestAnimationFrame(step);
-  }
-  var band = document.getElementById('stats-band');
-  if (!band) return;
-  var triggered = false;
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting && !triggered) {
-        triggered = true;
-        band.querySelectorAll('.stat-count').forEach(function (c) { animateCounter(c); });
-        observer.disconnect();
-      }
-    });
-  }, { threshold: 0.25 });
-  observer.observe(band);
-})();
-</script>
 </body>
 </html>
