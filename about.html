@@ -137,18 +137,33 @@
         <p>What separates us isn't just the finish — it's what happens before it. Identifying the issue correctly and preparing the surface properly is the most critical part of any job. A weak base means a failing finish, no matter what product goes on top. We've seen it time and time again: clients who call us after another company rushed through the prep, used the wrong material, or simply didn't understand the surface they were working on. We come in, diagnose it properly, and fix it right.</p>
         <p>We work with multiple systems — decorative concrete overlays, microcement, concrete repairs, sealing, staining — and we choose the right one for each specific situation. Not every surface needs the same solution, and experience is what tells you which one to use.</p>
         <p>Our clients consistently rate us 5 stars — not just for the results, but for how we work: on time, communicative, respectful of your home, and priced honestly.</p>
-        <div class="about-stats">
-          <div class="stat-box">
-            <div class="stat-num">20+</div>
-            <div class="stat-lbl">Years of experience in the GTA</div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-num">5★</div>
-            <div class="stat-lbl">Consistently rated by verified clients</div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-num">3yr</div>
-            <div class="stat-lbl">Warranty on all resurfacing work</div>
+        <!-- CREDENTIALS STATS BAND -->
+        <div class="stats-band" id="stats-band" aria-label="Artisan Coat credentials">
+          <div class="stats-band-inner">
+            <div class="stat-block">
+              <div class="stat-num-wrap">
+                <span class="stat-count" data-target="20">0</span><span class="stat-suffix">+</span>
+              </div>
+              <div class="stat-label">Years of GTA Experience</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-num-wrap">
+                <span class="stat-count" data-target="500">0</span><span class="stat-suffix">+</span>
+              </div>
+              <div class="stat-label">Homes Transformed</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-num-wrap">
+                <span class="stat-count" data-target="5">0</span><span class="stat-suffix">★</span>
+              </div>
+              <div class="stat-label">Average Client Rating</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-num-wrap">
+                <span class="stat-count" data-target="3">0</span><span class="stat-suffix">yr</span>
+              </div>
+              <div class="stat-label">Workmanship Warranty</div>
+            </div>
           </div>
         </div>
       </div>
@@ -338,6 +353,50 @@
     btn.classList.toggle('visible', window.scrollY > 400);
   });
   btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+</script>
+
+<!-- Count-up animation for Credentials section -->
+<script>
+(function () {
+  function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+  function animateCounter(el) {
+    var target = parseInt(el.getAttribute('data-target'), 10);
+    var duration = target >= 100 ? 1600 : 1200;
+    var startTime = null;
+
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      var elapsed = timestamp - startTime;
+      var progress = Math.min(elapsed / duration, 1);
+      var value = Math.round(easeOutCubic(progress) * target);
+      el.textContent = value;
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        el.textContent = target;
+      }
+    }
+    requestAnimationFrame(step);
+  }
+
+  var band = document.getElementById('stats-band');
+  if (!band) return;
+
+  var triggered = false;
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting && !triggered) {
+        triggered = true;
+        var counters = band.querySelectorAll('.stat-count');
+        counters.forEach(function (c) { animateCounter(c); });
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.25 });
+
+  observer.observe(band);
+})();
 </script>
 </body>
 </html>
