@@ -1,0 +1,41 @@
+{
+  "_instructions": "Fill in your GitHub Personal Access Token below. Create one at https://github.com/settings/tokens — needs 'repo' scope. Keep this file private.",
+  "github_token": "YOUR_GITHUB_TOKEN_HERE",
+  "github_owner": "hunchoalex57-creator",
+  "github_repo": "artisancoat",
+  "github_branch": "main",
+  "blog_path": "blog",
+  "posts_manifest_path": "blog/posts.json",
+  "site_url": "https://artisancoat.ca",
+  "post_frequency": "daily",
+  "affiliate_programs": [
+    "Amazon Associates Canada (amazon.ca) - concrete tools, sealers, microcement kits",
+    "Home Depot Canada affiliate - building materials, tools",
+    "Rona/Lowe's Canada - concrete products"
+  ],
+  "target_keywords": [
+    "concrete resurfacing Toronto",
+    "microcement Toronto",
+    "decorative concrete GTA",
+    "porch resurfacing Toronto",
+    "pool deck resurfacing GTA",
+    "concrete repair Toronto",
+    "Jewelstone Toronto",
+    "microcement bathroom GTA",
+    "stucco repair Toronto",
+    "concrete sealing GTA"
+  ],
+  "content_categories": [
+    "Interior Trends",
+    "Exterior Design",
+    "Cost & Value",
+    "How-To Guide",
+    "Products & Tools",
+    "Seasonal Tips"
+  ],
+  "service_areas": ["Toronto", "Mississauga", "Brampton", "Vaughan", "Oakville", "Etobicoke", "North York", "Scarborough", "Richmond Hill", "Markham", "Burlington", "GTA"],
+  "cta_phone": "416-889-8273",
+  "cta_whatsapp": "14168898273",
+  "calendly_url": "https://calendly.com/artisancoat",
+  "google_analytics_id": "G-8ZJD5XRK6N"
+}
