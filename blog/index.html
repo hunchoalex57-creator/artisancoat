@@ -300,6 +300,63 @@
       grid-column: 1 / -1;
     }
 
+    /* ── LIGHT THEME OVERRIDE ───────────────────────────────── */
+    .blog-filters {
+      background: #f0ece3 !important;
+      border-bottom: 1px solid #ddd5c0 !important;
+    }
+    .filter-btn {
+      border-color: #c8bfa8 !important;
+      color: #666 !important;
+    }
+    .filter-btn.active,
+    .filter-btn:hover {
+      border-color: var(--gold) !important;
+      color: var(--gold) !important;
+      background: rgba(196,151,42,0.08) !important;
+    }
+    .blog-main {
+      background: #faf9f7 !important;
+    }
+    .post-card {
+      background: #ffffff !important;
+      border-color: #e5dece !important;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .post-card:hover {
+      border-color: rgba(196,151,42,0.45) !important;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+    }
+    .post-card-img-placeholder {
+      background: linear-gradient(135deg, #ede8df, #ddd5c0) !important;
+      color: rgba(196,151,42,0.6) !important;
+    }
+    .post-card img.post-card-thumb {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+    }
+    .post-title {
+      color: #1a1209 !important;
+    }
+    .post-title:hover { color: var(--gold) !important; }
+    .post-excerpt {
+      color: #666 !important;
+    }
+    .post-date, .post-read-time {
+      color: #888 !important;
+    }
+    .featured-post {
+      background: #ffffff !important;
+    }
+    .featured-post .post-card-img-placeholder {
+      background: linear-gradient(135deg, #ede8df, #d9cdb5) !important;
+    }
+    .loading-state {
+      color: #999 !important;
+    }
+
     /* ── CTA STRIP ──────────────────────────────────────────── */
     .blog-cta-strip {
       background: linear-gradient(135deg, #111109, #1a1a0d);
@@ -513,6 +570,23 @@
     return d.toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' });
   }
 
+  // Thumbnail image map — slug → Pexels CDN URL
+  const postImages = {
+    'pool-deck-resurfacing-toronto-2026': 'https://images.pexels.com/photos/261238/pexels-photo-261238.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop',
+    'microcement-accent-walls-toronto-2026': 'https://images.pexels.com/photos/6980725/pexels-photo-6980725.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop',
+    'concrete-resurfacing-vs-replacement-toronto': 'https://images.pexels.com/photos/2004166/pexels-photo-2004166.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop',
+    'trending-exterior-concrete-designs-gta-2026': 'https://images.pexels.com/photos/7587880/pexels-photo-7587880.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop'
+  };
+
+  function getThumb(slug, category, featured) {
+    const imgUrl = postImages[slug];
+    if (imgUrl) {
+      const h = featured ? 'min-height:300px;' : '';
+      return `<a href="${slug}.html"><img class="post-card-thumb" src="${imgUrl}" alt="${category} — Artisan Coat GTA" style="${h}" loading="lazy"></a>`;
+    }
+    return `<div class="post-card-img-placeholder"><span>${category}</span></div>`;
+  }
+
   function renderPosts(posts) {
     const grid = document.getElementById('postsGrid');
     if (!posts.length) {
@@ -525,9 +599,7 @@
         // Featured first post
         html += `
         <article class="featured-post">
-          <div class="post-card-img-placeholder">
-            <span>${post.category}</span>
-          </div>
+          ${getThumb(post.slug, post.category, true)}
           <div class="post-card-body">
             <span class="featured-badge">Featured</span>
             <div class="post-meta">
@@ -543,9 +615,7 @@
       } else {
         html += `
         <article class="post-card">
-          <div class="post-card-img-placeholder">
-            <span>${post.category}</span>
-          </div>
+          ${getThumb(post.slug, post.category, false)}
           <div class="post-card-body">
             <div class="post-meta">
               <span class="post-category">${post.category}</span>
