@@ -182,9 +182,15 @@
   </url>
   <url>
     <loc>https://artisancoat.ca/blog/index.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artisancoat.ca/blog/how-much-does-concrete-resurfacing-cost-toronto.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://artisancoat.ca/blog/how-long-does-concrete-resurfacing-last-toronto.html</loc>
