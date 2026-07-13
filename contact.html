@@ -354,7 +354,7 @@
         <h2>Book a Free Estimate</h2>
         <p class="sub">Fill out the form and we'll get back to you within 24 hours — usually same day.</p>
 
-        <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" id="estimateForm">
+        <form action="https://api.web3forms.com/submit" method="POST" id="estimateForm">
           <!-- Web3Forms access key — get yours free at web3forms.com -->
           <input type="hidden" name="access_key" value="105e448d-2f0a-4eed-a4f1-981b81fd10ee">
           <input type="hidden" name="subject" value="New Estimate Request — Artisan Coat">
@@ -408,9 +408,12 @@
           </div>
 
           <div class="form-group">
-            <label for="photos">Add Photos of Your Surface <span style="font-weight:400; color:#888;">(optional — helps us quote faster)</span></label>
-            <input type="file" id="photos" name="attachment[]" accept="image/*" multiple>
-            <p class="form-note" style="margin-top:8px;">You can attach up to 3 photos (max 5&nbsp;MB each). JPG or PNG.</p>
+            <label>Have Photos of Your Surface? <span style="font-weight:400; color:#888;">(optional — helps us quote faster)</span></label>
+            <a href="https://wa.me/14168898273?text=Hi%20Artisan%20Coat!%20Here%20are%20some%20photos%20of%20my%20surface%20for%20a%20quote." target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:10px; background:#25D366; color:#fff; font-weight:600; font-size:0.92rem; padding:12px 20px; border-radius:6px; text-decoration:none; margin-top:4px;">
+              <svg style="width:18px;height:18px;fill:#fff;" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Send Photos on WhatsApp
+            </a>
+            <p class="form-note" style="margin-top:8px;">Send us photos directly on WhatsApp — it's the fastest way to get a quote.</p>
           </div>
 
           <button type="submit" class="form-submit-btn">Send My Estimate Request</button>
@@ -607,85 +610,6 @@
     document.getElementById('formSuccess').style.display = 'block';
     window.scrollTo({ top: document.getElementById('formSuccess').offsetTop - 100, behavior: 'smooth' });
   }
-
-  // Auto-compress uploaded photos in the browser before submit so a couple of
-  // photos always fit Web3Forms' ~5MB attachment limit. Fully automatic — the
-  // customer just picks photos and hits submit; resizing happens invisibly.
-  (function () {
-    var form = document.getElementById('estimateForm');
-    var photos = document.getElementById('photos');
-    if (!form || !photos) return;
-    var submitBtn = form.querySelector('.form-submit-btn');
-    var processing = false;
-
-    function compressImage(file) {
-      return new Promise(function (resolve) {
-        // Non-images (or anything odd) pass through untouched
-        if (!file.type || file.type.indexOf('image/') !== 0) { resolve(file); return; }
-        var reader = new FileReader();
-        reader.onload = function (ev) {
-          var img = new Image();
-          img.onload = function () {
-            var MAX = 1600;
-            var w = img.width, h = img.height;
-            if (Math.max(w, h) > MAX) {
-              var s = MAX / Math.max(w, h);
-              w = Math.round(w * s); h = Math.round(h * s);
-            }
-            var canvas = document.createElement('canvas');
-            canvas.width = w; canvas.height = h;
-            canvas.getContext('2d').drawImage(img, 0, 0, w, h);
-            canvas.toBlob(function (blob) {
-              if (!blob) { resolve(file); return; }
-              var name = (file.name || 'photo').replace(/\.(png|heic|heif|webp|jpeg|jpg)$/i, '') + '.jpg';
-              resolve(new File([blob], name, { type: 'image/jpeg' }));
-            }, 'image/jpeg', 0.72);
-          };
-          img.onerror = function () { resolve(file); };
-          img.src = ev.target.result;
-        };
-        reader.onerror = function () { resolve(file); };
-        reader.readAsDataURL(file);
-      });
-    }
-
-    form.addEventListener('submit', function (e) {
-      if (processing) return; // already compressed — let it submit
-      var files = photos.files;
-      if (!files || !files.length) return; // no photos, submit normally
-
-      e.preventDefault();
-      if (files.length > 3) {
-        alert('Please attach a maximum of 3 photos. You can send more by WhatsApp at 416-889-8273.');
-        return;
-      }
-
-      processing = true;
-      if (submitBtn) { submitBtn.disabled = true; submitBtn.dataset.label = submitBtn.textContent; submitBtn.textContent = 'Sending…'; }
-
-      var jobs = [];
-      for (var i = 0; i < files.length; i++) jobs.push(compressImage(files[i]));
-
-      Promise.all(jobs).then(function (compressed) {
-        var total = 0;
-        compressed.forEach(function (f) { total += f.size; });
-        if (total > 5 * 1024 * 1024) {
-          processing = false;
-          if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = submitBtn.dataset.label || 'Send My Estimate Request'; }
-          alert('Even after optimizing, your photos are over 5 MB total. Please attach fewer photos, or send them by WhatsApp at 416-889-8273.');
-          return;
-        }
-        var dt = new DataTransfer();
-        compressed.forEach(function (f) { dt.items.add(f); });
-        photos.files = dt.files;
-        form.submit();
-      }).catch(function () {
-        // If anything fails, fall back to submitting the originals
-        processing = false;
-        form.submit();
-      });
-    });
-  })();
 </script>
 
 <!-- Scroll to Top -->
