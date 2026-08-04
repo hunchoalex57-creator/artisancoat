@@ -90,3 +90,38 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+// ── LEAD TRACKING (GA4 + Google Ads) ─────────────────────────
+(function () {
+  var AW_FORM = 'AW-18088436965/3itsCKqS4JscEOXJnrFD';
+
+  function track(name, params) {
+    if (typeof gtag !== 'function') return;
+    gtag('event', name, params || {});
+  }
+
+  // Contact-form success (Web3Forms redirects back with ?success=true)
+  if (new URLSearchParams(location.search).get('success') === 'true' &&
+      !sessionStorage.getItem('ac_lead_sent')) {
+    sessionStorage.setItem('ac_lead_sent', '1');
+    track('generate_lead', { method: 'contact_form' });
+    track('conversion', { send_to: AW_FORM });
+  }
+
+  // Outbound contact clicks
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+
+    if (href.indexOf('tel:') === 0) {
+      track('phone_click', { method: 'tel_link', link_url: href });
+    } else if (href.indexOf('wa.me') > -1 || href.indexOf('whatsapp') > -1) {
+      track('whatsapp_click', { method: 'whatsapp', link_url: href });
+    } else if (href.indexOf('mailto:') === 0) {
+      track('email_click', { method: 'email' });
+    } else if (href.indexOf('calendly.com') > -1) {
+      track('booking_click', { method: 'calendly' });
+    }
+  }, true);
+})();
