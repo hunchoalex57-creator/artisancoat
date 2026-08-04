@@ -100,7 +100,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   function track(name, params) {
     if (typeof gtag !== 'function') return;
     var p = params || {};
-    p.send_to = GA4;
+    if (!p.send_to) p.send_to = GA4;
     gtag('event', name, p);
   }
 
