@@ -104,10 +104,47 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     gtag('event', name, p);
   }
 
+  // Stash the lead's own details on submit so enhanced conversions can use
+  // them on the redirected success page (instead of scraping the page).
+  var form = document.getElementById('estimateForm');
+  if (form) {
+    form.addEventListener('submit', function () {
+      function val(id) {
+        var el = document.getElementById(id);
+        return el && el.value ? el.value.trim() : '';
+      }
+      var digits = val('phone').replace(/\D/g, '');
+      if (digits.length === 10) digits = '1' + digits;
+
+      var ud = {};
+      if (val('email')) ud.email = val('email').toLowerCase();
+      if (digits.length === 11) ud.phone_number = '+' + digits;
+      if (val('fname') || val('lname') || val('city')) {
+        ud.address = {
+          first_name: val('fname').toLowerCase(),
+          last_name: val('lname').toLowerCase(),
+          city: val('city').toLowerCase(),
+          region: 'ON',
+          country: 'CA'
+        };
+      }
+      try { sessionStorage.setItem('ac_ud', JSON.stringify(ud)); } catch (err) {}
+    });
+  }
+
   // Contact-form success (Web3Forms redirects back with ?success=true)
   if (new URLSearchParams(location.search).get('success') === 'true' &&
       !sessionStorage.getItem('ac_lead_sent')) {
     sessionStorage.setItem('ac_lead_sent', '1');
+
+    try {
+      var stored = sessionStorage.getItem('ac_ud');
+      if (stored && typeof gtag === 'function') {
+        gtag('set', 'user_data', JSON.parse(stored));
+      }
+      sessionStorage.removeItem('ac_ud');
+    } catch (err) {}
+
     track('generate_lead', { method: 'contact_form' });
     track('conversion', { send_to: AW_FORM });
   }
