@@ -95,9 +95,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 (function () {
   var AW_FORM = 'AW-18088436965/3itsCKqS4JscEOXJnrFD';
 
+  var GA4 = 'G-8ZJD5XRK6N';
+
   function track(name, params) {
     if (typeof gtag !== 'function') return;
-    gtag('event', name, params || {});
+    var p = params || {};
+    p.send_to = GA4;
+    gtag('event', name, p);
   }
 
   // Contact-form success (Web3Forms redirects back with ?success=true)
