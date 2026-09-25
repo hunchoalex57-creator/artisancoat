@@ -1,5 +1,5 @@
 {
-  "_instructions": "Fill in your GitHub Personal Access Token below. Create one at https://github.com/settings/tokens — needs 'repo' scope. Keep this file private.",
+  "_instructions": "Copy this file to config.json and put your GitHub Personal Access Token in it. Create one at https://github.com/settings/tokens with 'repo' scope. config.json is gitignored so the token never reaches this public repository. Never commit a real token.",
   "github_token": "YOUR_GITHUB_TOKEN_HERE",
   "github_owner": "hunchoalex57-creator",
   "github_repo": "artisancoat",
@@ -33,7 +33,20 @@
     "Products & Tools",
     "Seasonal Tips"
   ],
-  "service_areas": ["Toronto", "Mississauga", "Brampton", "Vaughan", "Oakville", "Etobicoke", "North York", "Scarborough", "Richmond Hill", "Markham", "Burlington", "GTA"],
+  "service_areas": [
+    "Toronto",
+    "Mississauga",
+    "Brampton",
+    "Vaughan",
+    "Oakville",
+    "Etobicoke",
+    "North York",
+    "Scarborough",
+    "Richmond Hill",
+    "Markham",
+    "Burlington",
+    "GTA"
+  ],
   "cta_phone": "416-889-8273",
   "cta_whatsapp": "14168898273",
   "calendly_url": "https://calendly.com/artisancoat",

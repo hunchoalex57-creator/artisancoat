@@ -1,2 +1,8 @@
 .env
 node_modules/
+
+# Local automation config — contains a GitHub token, never commit
+blog-automation/config.json
+
+# macOS
+.DS_Store

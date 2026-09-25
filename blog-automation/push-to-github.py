@@ -20,6 +20,12 @@ except ImportError:
 def load_config():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     config_path = os.path.join(script_dir, "config.json")
+    if not os.path.exists(config_path):
+        print("ERROR: blog-automation/config.json not found.")
+        print("  It is gitignored on purpose so the token never reaches the public repo.")
+        print("  Copy the template and fill in your token:")
+        print("    cp blog-automation/config.example.json blog-automation/config.json")
+        sys.exit(1)
     with open(config_path, "r") as f:
         return json.load(f)
 
