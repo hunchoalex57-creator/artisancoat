@@ -7,7 +7,7 @@
   "blog_path": "blog",
   "posts_manifest_path": "blog/posts.json",
   "site_url": "https://artisancoat.ca",
-  "post_frequency": "daily",
+  "post_frequency": "twice-monthly",
   "affiliate_programs": [
     "Amazon Associates Canada (amazon.ca) - concrete tools, sealers, microcement kits",
     "Home Depot Canada affiliate - building materials, tools",
@@ -29,9 +29,11 @@
     "Interior Trends",
     "Exterior Design",
     "Cost & Value",
-    "How-To Guide",
-    "Products & Tools",
-    "Seasonal Tips"
+    "Repair & Restoration",
+    "How-To",
+    "Products",
+    "Seasonal",
+    "Case Study"
   ],
   "service_areas": [
     "Toronto",
@@ -50,5 +52,8 @@
   "cta_phone": "416-889-8273",
   "cta_whatsapp": "14168898273",
   "calendly_url": "https://calendly.com/artisancoat",
-  "google_analytics_id": "G-8ZJD5XRK6N"
+  "google_analytics_id": "G-8ZJD5XRK6N",
+  "_frequency_note": "Twice monthly (1st and 15th), per the SEO playbook target of 1-2 posts/month. Daily was the previous setting and it produced planned-but-unwritten posts that rendered as 404 cards on /blog/.",
+  "company_experience": "14+ years (since 2012)",
+  "_categories_note": "These must match the data-filter values on blog/index.html exactly, or posts become unfilterable."
 }
