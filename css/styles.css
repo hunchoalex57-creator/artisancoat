@@ -81,6 +81,20 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 .btn-dark { background: var(--dark); color: var(--white); }
 .btn-dark:hover { background: #2a2a2a; transform: translateY(-2px); }
 
+/* ── SPLIT ROWS (image beside text) ──────────────────────────── */
+.split-row { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+
+/* ── WIDE CONTENT ────────────────────────────────────────────── */
+/* Grid items default to min-width:auto, so one wide table or image would
+   stretch the article column past the screen; let the columns shrink. */
+.article-layout > * { min-width: 0; }
+.table-wrap { overflow-x: auto; }
+
+/* The blog posts' light-theme rules (.article-body h3/p with !important) also
+   hit the dark CTA banner at the end of each post; keep its text light. */
+.article-body .article-cta-banner h3 { color: #fff !important; }
+.article-body .article-cta-banner p { color: rgba(255,255,255,0.7) !important; }
+
 /* ── NAV ───────────────────────────────────────────────────── */
 .nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
@@ -602,6 +616,11 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   .wa-float { display: none; }
   .scroll-top { bottom: 90px; right: 28px; }
   .about-stats { grid-template-columns: repeat(3, 1fr); }
+  .btn { white-space: normal; justify-content: center; text-align: center; }
+  /* Stack image above text; the inline order:1/2 that alternates rows on desktop is reset here */
+  .split-row { grid-template-columns: 1fr; gap: 28px; }
+  .split-row > * { order: 0 !important; }
+  .split-row > div > img { height: 280px !important; }
   /* stats-band: tablet — keep row but tighten padding */
   .stat-block { padding: 36px 12px; }
   .stat-count { font-size: clamp(2.8rem, 5vw, 4rem); }
