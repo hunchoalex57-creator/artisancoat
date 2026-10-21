@@ -686,7 +686,8 @@
   }
 
   function formatDate(dateStr) {
-    const d = new Date(dateStr);
+    // A bare YYYY-MM-DD parses as UTC midnight, which is the previous evening in Toronto.
+    const d = new Date(dateStr + 'T00:00:00');
     return d.toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' });
   }
 
@@ -708,8 +709,9 @@
     'protect-concrete-freeze-thaw-toronto': '../images/concrete-restoration-toronto-gta.jpg'
   };
 
-  function getThumb(slug, category, featured) {
-    const imgUrl = postImages[slug];
+  function getThumb(slug, category, featured, heroImage) {
+    // Fall back to the post's own hero image so new posts never show a blank card.
+    const imgUrl = postImages[slug] || (heroImage || '').replace('https://artisancoat.ca/', '../');
     if (imgUrl) {
       const h = featured ? 'min-height:300px;' : '';
       return `<a href="${slug}.html"><img class="post-card-thumb" src="${imgUrl}" alt="${category} — Artisan Coat GTA" style="${h}" loading="lazy"></a>`;
@@ -729,7 +731,7 @@
         // Featured first post
         html += `
         <article class="featured-post">
-          ${getThumb(post.slug, post.category, true)}
+          ${getThumb(post.slug, post.category, true, post.heroImage)}
           <div class="post-card-body">
             <span class="featured-badge">Featured</span>
             <div class="post-meta">
@@ -745,7 +747,7 @@
       } else {
         html += `
         <article class="post-card">
-          ${getThumb(post.slug, post.category, false)}
+          ${getThumb(post.slug, post.category, false, post.heroImage)}
           <div class="post-card-body">
             <div class="post-meta">
               <span class="post-category">${post.category}</span>

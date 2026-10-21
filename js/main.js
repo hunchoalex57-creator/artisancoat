@@ -33,12 +33,27 @@ document.querySelectorAll('.nav-links a, .nav-mobile a').forEach(link => {
 
 
 // ── FAQ ACCORDION ────────────────────────────────────────────
+// Some pages use .faq-item for plain or <details> FAQs with no .faq-question;
+// skip those rather than throw, which would stop the rest of this file.
 document.querySelectorAll('.faq-item').forEach(item => {
-  item.querySelector('.faq-question').addEventListener('click', () => {
+  const question = item.querySelector('.faq-question');
+  if (!question) return;
+  question.addEventListener('click', () => {
     const isOpen = item.classList.contains('open');
     document.querySelectorAll('.faq-item.open').forEach(o => o.classList.remove('open'));
     if (!isOpen) item.classList.add('open');
   });
+});
+
+// ── WIDE TABLES ──────────────────────────────────────────────
+// Price tables can be wider than a phone screen; give each its own sideways
+// scroll instead of letting it push the whole page wider.
+document.querySelectorAll('table').forEach(table => {
+  if (table.parentElement.classList.contains('table-wrap')) return;
+  const wrap = document.createElement('div');
+  wrap.className = 'table-wrap';
+  table.parentNode.insertBefore(wrap, table);
+  wrap.appendChild(table);
 });
 
 // ── GALLERY FILTER ───────────────────────────────────────────
