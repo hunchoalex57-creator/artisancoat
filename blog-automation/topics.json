@@ -1,5 +1,5 @@
 {
-  "_note": "Backlog recovered from the pre-Oct-2026 manifest. The writer picks the top unused item. A topic is only removed once its HTML page exists.",
+  "_note": "Backlog of planned topics. The writer picks the top unused item. A topic is only removed once its HTML page exists. RULE: never add an entry to blog/posts.json unless blog/<slug>.html is committed in the same change; a manifest entry without a page renders as a 404 card on /blog/. Run blog-automation/check-blog.py before publishing.",
   "topics": [
     {
       "slug": "concrete-crack-repair-toronto",
@@ -208,6 +208,477 @@
         "driveway resurfacing cost Ontario",
         "Jewelstone driveway Toronto"
       ]
+    },
+    {
+      "slug": "microcement-bedroom-walls-toronto",
+      "title": "Microcement Bedroom Walls in Toronto: The 2026 Headboard Wall GTA Homeowners Are Booking Before Winter",
+      "category": "Interior Trends",
+      "keywords": [
+        "microcement bedroom walls Toronto",
+        "microcement headboard wall GTA",
+        "textured plaster bedroom walls Toronto",
+        "seamless bedroom feature wall GTA"
+      ],
+      "excerpt": "Designers call it the power headboard: a full-height textured wall that replaces the headboard, the art and the accent paint in one move. Here is what microcement bedroom walls cost in Toronto in 2026, how they are built over existing drywall with no demolition, and when we tell homeowners not to do it."
+    },
+    {
+      "slug": "microcement-curved-walls-arches-toronto",
+      "title": "Microcement Curved Walls and Arches in Toronto: Why the Arch Came Back in 2026",
+      "category": "Interior Trends",
+      "keywords": [
+        "microcement curved walls Toronto",
+        "microcement arches GTA",
+        "curved wall plaster finish Toronto",
+        "arched doorway finish Toronto"
+      ],
+      "excerpt": "Houzz searches for arched openings jumped 177% this year, and drywall cannot finish a curve cleanly. Here is what microcement curved walls and arches cost in Toronto in 2026, how the spring line and reveal are actually built, and the radius limits nobody mentions until it cracks."
+    },
+    {
+      "slug": "microcement-living-room-toronto",
+      "title": "Microcement Living Rooms in Toronto: The Seamless Wall-to-Floor Wrap GTA Designers Are Specifying in 2026",
+      "category": "Interior Trends",
+      "keywords": [
+        "microcement living room Toronto",
+        "seamless walls and floors GTA",
+        "microcement walls Toronto",
+        "microcement cost Toronto"
+      ],
+      "excerpt": "The accent wall was the warm-up. Designers across the GTA are now wrapping entire living rooms in one continuous microcement surface — floor, walls, ceiling, millwork — with no joints anywhere. Here are real 2026 costs, how the wrap is built, and the three situations where we say no."
+    },
+    {
+      "slug": "microcement-steam-room-sauna-toronto",
+      "title": "Microcement Steam Rooms & Saunas in Toronto: The 2026 Home Spa Build GTA Homeowners Are Asking For",
+      "category": "Interior Trends",
+      "keywords": [
+        "microcement steam room Toronto",
+        "microcement sauna Toronto",
+        "home spa renovation GTA",
+        "seamless steam shower Toronto",
+        "wellness room renovation Toronto"
+      ],
+      "excerpt": "Wellness rooms are the strongest-returning renovation in the high-end GTA market right now — and grout is their weakest link. Here's what a seamless microcement steam room or sauna surround costs in Toronto in 2026, plus the vapour barrier, membrane and steam-rated sealer that decide whether it lasts fifteen years or three."
+    },
+    {
+      "slug": "microcement-condo-bathroom-toronto",
+      "title": "Microcement Condo Bathrooms in Toronto: The No-Demolition Reno Your Condo Board Will Actually Approve",
+      "category": "Interior Trends",
+      "keywords": [
+        "microcement condo bathroom Toronto",
+        "condo bathroom renovation Toronto",
+        "no demolition bathroom renovation GTA",
+        "seamless bathroom condo Toronto",
+        "microcement cost Toronto"
+      ],
+      "excerpt": "Condo boards don't fear renovations — they fear demolition. A microcement condo bathroom in Toronto needs none of it: no tile-out, no debris bins, almost no freight elevator time. Here's what it costs in 2026, how approval works, and why it finishes in under a week."
+    },
+    {
+      "slug": "retaining-wall-resurfacing-toronto",
+      "title": "Retaining Wall Resurfacing in Toronto: 2026 Costs, Stone-Look Finishes & When to Repair Instead",
+      "category": "Exterior Design",
+      "keywords": [
+        "retaining wall resurfacing Toronto",
+        "concrete retaining wall repair GTA",
+        "vertical concrete overlay",
+        "stone look retaining wall Mississauga"
+      ],
+      "excerpt": "Most GTA homeowners get quoted a tear-out when what they need is a repair and a resurface at a third of the cost. Here's what retaining wall resurfacing costs per square foot in Toronto, which stone-look finishes survive our freeze-thaw winters, and the one condition that means you genuinely do need a rebuild."
+    },
+    {
+      "slug": "microcement-vs-epoxy-floors-toronto",
+      "title": "Microcement vs Epoxy Flooring in Toronto: Which Seamless Floor Actually Belongs in Your Home",
+      "category": "Cost & Value",
+      "keywords": [
+        "microcement vs epoxy Toronto",
+        "epoxy flooring GTA",
+        "microcement flooring Toronto",
+        "seamless floors GTA"
+      ],
+      "excerpt": "Epoxy costs a third of what microcement does — and in a garage it's the right call. In a basement, bathroom, or living room it isn't. Real 2026 GTA costs, lifespan, and the moisture problem most contractors never mention when quoting epoxy flooring in Toronto."
+    },
+    {
+      "slug": "efflorescence-concrete-repair-toronto",
+      "title": "Efflorescence on Concrete in Toronto: Why the White Powder Keeps Coming Back",
+      "category": "How-To Guide",
+      "keywords": [
+        "efflorescence concrete Toronto",
+        "white powder on concrete GTA",
+        "concrete efflorescence removal Toronto",
+        "concrete moisture repair GTA"
+      ],
+      "excerpt": "That chalky white bloom on your slab, steps or basement wall is efflorescence — salt left behind by water moving through the concrete. Here is how to remove it properly, and why it keeps returning until you fix the moisture source."
+    },
+    {
+      "slug": "terrazzo-concrete-overlay-toronto",
+      "title": "Terrazzo Look Concrete Overlays in Toronto: The Speckled Floor Everyone Wants in 2026",
+      "category": "Interior Trends",
+      "keywords": [
+        "terrazzo look concrete overlay Toronto",
+        "terrazzo flooring GTA",
+        "terrazzo concrete floor Toronto",
+        "decorative concrete overlay GTA"
+      ],
+      "excerpt": "Terrazzo is the breakout surface of 2026, but poured terrazzo starts around $20 per square foot. A terrazzo look concrete overlay bonds straight over your existing concrete or tile for roughly half the cost. No demolition, no grout lines, no height loss."
+    },
+    {
+      "slug": "sunken-concrete-repair-toronto",
+      "title": "Sunken Concrete Slab Repair in Toronto: Why It Settled and What Actually Fixes It",
+      "category": "How-To Guide",
+      "keywords": [
+        "sunken concrete repair Toronto",
+        "concrete levelling Toronto",
+        "concrete slab lifting GTA",
+        "mudjacking vs polyurethane Toronto"
+      ],
+      "excerpt": "A sunken slab is a soil problem, not a concrete problem. Here is why GTA slabs settle, what sunken concrete repair in Toronto costs in 2026, and why foam lifting beats mudjacking through an Ontario winter."
+    },
+    {
+      "slug": "wood-deck-to-concrete-patio-toronto",
+      "title": "Wood Deck to Concrete Patio in Toronto: 2026 Costs & Why Homeowners Are Switching",
+      "category": "Cost & Value",
+      "keywords": [
+        "wood deck to concrete patio Toronto",
+        "concrete patio cost GTA",
+        "deck replacement alternative Toronto",
+        "patio resurfacing Mississauga"
+      ],
+      "excerpt": "Thousands of GTA decks built in the 1990s boom are hitting replacement age at once. A new deck runs $45-$95/sq ft in Toronto, while a concrete patio lands at $12-$30. Here are the real numbers, the 25-year maintenance math, and why many backyards already have a pad worth resurfacing."
+    },
+    {
+      "slug": "microcement-cost-toronto",
+      "title": "Microcement Cost in Toronto: Real Prices Per Square Foot in 2026",
+      "category": "Cost & Value",
+      "keywords": [
+        "microcement cost Toronto",
+        "microcement price per square foot GTA",
+        "microcement bathroom cost Toronto",
+        "microcement floor cost Toronto"
+      ],
+      "excerpt": "Almost nobody in the GTA publishes microcement pricing. Here is what microcement cost in Toronto actually looks like in 2026 — real per-square-foot ranges for walls, floors, bathrooms and showers, what a full-system install includes, and the five things that move a quote up or down."
+    },
+    {
+      "slug": "rooftop-terrace-resurfacing-toronto",
+      "title": "Rooftop Terrace Resurfacing in Toronto: 2026 Costs, Coatings & the Membrane Question Nobody Asks",
+      "category": "Exterior Design",
+      "keywords": [
+        "rooftop terrace resurfacing Toronto",
+        "rooftop deck coating GTA",
+        "terrace waterproof coating Toronto",
+        "condo terrace resurfacing Toronto",
+        "townhouse rooftop terrace GTA"
+      ],
+      "excerpt": "Toronto builds more rooftop terraces than any city in Canada and finishes almost none of them properly. Here is what rooftop terrace resurfacing actually costs in 2026, which coatings survive a GTA winter, and the membrane question that decides whether the job should happen at all."
+    },
+    {
+      "slug": "travertine-look-concrete-overlay-toronto",
+      "title": "Travertine Look Concrete Overlays in Toronto: Natural Stone Looks Without the Natural Stone Bill",
+      "category": "Exterior Design",
+      "keywords": [
+        "travertine look concrete overlay Toronto",
+        "travertine concrete patio GTA",
+        "stone look concrete resurfacing Toronto",
+        "pool deck overlay GTA"
+      ],
+      "excerpt": "Travertine is the most-requested outdoor finish of 2026 — and the first thing GTA homeowners cut when the quote lands. A travertine look concrete overlay bonds straight over your existing patio or pool deck for roughly half the price. Here are the real 2026 numbers, the four finishes people are asking for, and how to tell if your slab qualifies."
+    },
+    {
+      "slug": "concrete-resurfacing-cost-toronto",
+      "title": "Concrete Resurfacing Cost in Toronto: What You'll Actually Pay in 2026",
+      "category": "Cost & Value",
+      "keywords": [
+        "concrete resurfacing cost Toronto",
+        "concrete overlay price GTA",
+        "driveway resurfacing cost Toronto",
+        "concrete repair cost Toronto"
+      ],
+      "excerpt": "Most contractors won't give you a number until they're standing on your driveway. Here is what concrete resurfacing cost in Toronto really looks like in 2026 — priced by surface and by finish, with the five things that push a quote up and the honest math against full replacement."
+    },
+    {
+      "slug": "seamless-indoor-outdoor-flooring-toronto",
+      "title": "Seamless Indoor-Outdoor Flooring in Toronto: How One Surface Flows From Kitchen to Patio",
+      "category": "Interior Trends",
+      "keywords": [
+        "seamless indoor outdoor flooring Toronto",
+        "microcement patio GTA",
+        "concrete overlay indoor outdoor Toronto",
+        "continuous flooring Toronto"
+      ],
+      "excerpt": "The threshold is disappearing from GTA homes. Seamless indoor-outdoor flooring pairs microcement inside with a frost-rated overlay outside so one surface runs from the kitchen to the patio. Here's how it's built for Ontario winters and what it costs in 2026."
+    },
+    {
+      "slug": "salt-damage-concrete-repair-toronto",
+      "title": "Salt Damage on Concrete in Toronto: How to Repair It — and Stop It Coming Back",
+      "category": "Seasonal Tips",
+      "keywords": [
+        "salt damage concrete repair Toronto",
+        "concrete scaling repair GTA",
+        "road salt driveway damage Toronto",
+        "concrete resurfacing Toronto"
+      ],
+      "excerpt": "Flaking, pitting and white crust on your driveway isn't bad concrete — it's road salt plus 55 freeze-thaw cycles a year. Here's how salt damage concrete repair in Toronto actually works, when resurfacing fixes it for a third of replacement cost, and how to stop it recurring."
+    },
+    {
+      "slug": "microcement-maintenance-cleaning-toronto",
+      "title": "Microcement Maintenance in Toronto: How to Clean, Protect and Reseal a Seamless Surface",
+      "category": "How-To Guide",
+      "keywords": [
+        "microcement maintenance Toronto",
+        "how to clean microcement GTA",
+        "microcement resealing Toronto",
+        "microcement floor care"
+      ],
+      "excerpt": "Microcement is low-maintenance, not no-maintenance. Here's the full microcement maintenance routine for Toronto homes — what to clean it with, the products that quietly destroy the sealer, and exactly when a GTA floor, wall or shower needs resealing."
+    },
+    {
+      "slug": "matte-vs-gloss-concrete-sealer-toronto",
+      "title": "Matte vs Gloss Concrete Sealer in Toronto: Which Finish Actually Wins",
+      "category": "Exterior Design",
+      "keywords": [
+        "matte vs gloss concrete sealer Toronto",
+        "concrete sealing GTA",
+        "driveway sealer Toronto",
+        "concrete sealer finish Mississauga"
+      ],
+      "excerpt": "Gloss looks incredible for one season. Matte still looks right five winters later. Here's how each concrete sealer finish really performs on GTA driveways, patios and pool decks — slip resistance, freeze-thaw, reseal intervals and 2026 costs."
+    },
+    {
+      "slug": "tadelakt-vs-microcement-toronto",
+      "title": "Tadelakt vs Microcement in Toronto: Which Waterproof Plaster Actually Belongs in Your Bathroom",
+      "category": "Interior Trends",
+      "keywords": [
+        "tadelakt vs microcement Toronto",
+        "microcement bathroom GTA",
+        "waterproof plaster Toronto",
+        "seamless bathroom walls Toronto"
+      ],
+      "excerpt": "Both are seamless, both go over existing tile, and both look incredible in photos. But only one survives a Toronto family bathroom without annual upkeep. We compare tadelakt vs microcement on real GTA costs, waterproofing, durability and maintenance."
+    },
+    {
+      "slug": "microcement-vanity-sink-toronto",
+      "title": "Microcement Vanities in Toronto: The Seamless Sink GTA Homeowners Are Building in 2026",
+      "category": "Interior Trends",
+      "keywords": [
+        "microcement vanity Toronto",
+        "microcement sink GTA",
+        "microcement bathroom countertop Toronto",
+        "seamless vanity Mississauga",
+        "concrete vanity Toronto"
+      ],
+      "excerpt": "Tile has grout. Stone has seams. A microcement vanity in Toronto has neither — one continuous surface from wall to counter to basin, installed straight over your existing cabinet. Here are the 2026 GTA costs, basin options and the waterproofing detail that decides whether it lasts."
+    },
+    {
+      "slug": "microcement-colours-toronto",
+      "title": "Microcement Colours in Toronto: How to Choose the Right Shade",
+      "category": "Interior Trends",
+      "keywords": [
+        "microcement colours Toronto",
+        "microcement shades GTA",
+        "warm greige microcement",
+        "microcement finish Mississauga"
+      ],
+      "excerpt": "Microcement colour is a one-time decision — the pigment runs through the material, not over it. Here are the microcement colours Toronto homeowners are actually choosing in 2026, how Ontario light changes what you see, and the mistakes that force an expensive re-do."
+    },
+    {
+      "slug": "limewash-vs-microcement-walls-toronto",
+      "title": "Limewash vs Microcement Walls in Toronto: Which Textured Finish Actually Belongs in Your Home",
+      "category": "Interior Trends",
+      "keywords": [
+        "microcement Toronto",
+        "limewash vs microcement GTA",
+        "textured wall finishes Toronto",
+        "seamless walls Mississauga",
+        "microcement walls Vaughan"
+      ],
+      "excerpt": "Texture is the defining interior trend of 2026, but limewash and microcement are not interchangeable. Here is the honest comparison on water resistance, durability, and cost from 20+ years of microcement installs across Toronto and the GTA."
+    },
+    {
+      "slug": "concrete-resurfacing-lifespan-toronto",
+      "title": "Concrete Resurfacing Lifespan in Toronto: How Long It Actually Lasts",
+      "category": "Cost & Value",
+      "keywords": [
+        "concrete resurfacing lifespan Toronto",
+        "how long does concrete resurfacing last GTA",
+        "concrete overlay durability Toronto"
+      ],
+      "excerpt": "A professionally installed concrete overlay lasts 10 to 20 years in the GTA. A badly installed one starts failing in its second winter. Here are the real concrete resurfacing lifespan numbers by system, the five things that kill an overlay early, and the maintenance that doubles it."
+    },
+    {
+      "slug": "microcement-laundry-mudroom-toronto",
+      "title": "Microcement Laundry Rooms & Mudrooms: The 2026 Upgrade Toronto Homeowners Are Booking",
+      "category": "Interior Trends",
+      "keywords": [
+        "microcement laundry room Toronto",
+        "microcement mudroom GTA",
+        "seamless waterproof mudroom flooring Toronto"
+      ],
+      "excerpt": "The mudroom-laundry hybrid is the most-designed room of 2026 — and it's the one room in a GTA home that takes road salt, wet boots and detergent spills every winter. Microcement laundry room finishes are seamless, waterproof and installed over your existing tile. See 2026 GTA costs and what actually lasts."
+    },
+    {
+      "slug": "non-slip-concrete-coating-toronto",
+      "title": "Non-Slip Concrete Coating in Toronto: How to Make Steps, Porches & Pool Decks Safe Before Winter",
+      "category": "Exterior Design",
+      "keywords": [
+        "non-slip concrete coating Toronto",
+        "anti-slip concrete GTA",
+        "slip resistant concrete steps Toronto",
+        "non slip pool deck coating GTA"
+      ],
+      "excerpt": "Worn, smooth concrete is the most dangerous surface on a GTA property once it rains or freezes. Non-slip concrete coating rebuilds real traction into steps, porches, walkways and pool decks — no demolition, no replacement. Here are the systems that survive Toronto winters and what they cost in 2026."
+    },
+    {
+      "slug": "microcement-heated-floors-toronto",
+      "title": "Microcement Over Heated Floors in Toronto: The Seamless Warm Floor GTA Homeowners Are Specifying in 2026",
+      "category": "Interior Trends",
+      "keywords": [
+        "microcement heated floors Toronto",
+        "microcement underfloor heating GTA",
+        "radiant floor heating Toronto",
+        "seamless heated bathroom floor Toronto"
+      ],
+      "excerpt": "Radiant heat is now standard spec in GTA primary bathrooms — but tile grout cracks over it and wood insulates against it. Here's why microcement heated floors in Toronto conduct better, what they cost in 2026, and the cure schedule that keeps them from cracking."
+    },
+    {
+      "slug": "interlock-vs-concrete-overlay-toronto",
+      "title": "Interlock vs Concrete Overlay in Toronto: The Honest Cost & Durability Comparison",
+      "category": "Cost & Value",
+      "keywords": [
+        "interlock vs concrete overlay Toronto",
+        "concrete overlay cost GTA",
+        "driveway resurfacing Toronto"
+      ],
+      "excerpt": "Paver companies say interlock always wins — they sell interlock. Here's the real comparison for GTA homeowners: 2026 costs, freeze-thaw performance, and what ten years of maintenance actually runs. A concrete overlay in Toronto saves 40–65% when your slab is sound."
+    },
+    {
+      "slug": "concrete-resurfacing-home-value-toronto",
+      "title": "Concrete Resurfacing ROI in Toronto: What Curb Appeal Actually Adds to Your Home's Value",
+      "category": "Cost & Value",
+      "keywords": [
+        "concrete resurfacing home value Toronto",
+        "curb appeal ROI GTA",
+        "driveway resurfacing return on investment Toronto",
+        "concrete resurfacing cost Mississauga"
+      ],
+      "excerpt": "Buyers judge your house before they reach the front door — and the route they walk is concrete. Here's what concrete resurfacing actually returns in the 2026 GTA market, which surfaces move the needle, and when an overlay beats a tear-out."
+    },
+    {
+      "slug": "microcement-wet-room-shower-toronto",
+      "title": "Microcement Wet Rooms in Toronto: The Curbless Shower GTA Homeowners Are Building in 2026",
+      "category": "Interior Trends",
+      "keywords": [
+        "microcement wet room Toronto",
+        "curbless shower Toronto",
+        "seamless shower GTA",
+        "wet room bathroom Mississauga"
+      ],
+      "excerpt": "The curbless wet room is 2026's defining bathroom trend — and grout lines are what ruin the effect. Here's why Toronto homeowners are finishing seamless wet rooms in microcement, what the build actually involves, and real 2026 GTA costs."
+    },
+    {
+      "slug": "polished-concrete-vs-microcement-toronto",
+      "title": "Polished Concrete vs Microcement Floors in Toronto: Which One Actually Belongs in Your Home",
+      "category": "Cost & Value",
+      "keywords": [
+        "polished concrete vs microcement Toronto",
+        "microcement floors Toronto",
+        "seamless concrete floors GTA",
+        "microcement floor cost Mississauga"
+      ],
+      "excerpt": "Polished concrete and microcement look identical in a photo but behave nothing alike in a real GTA home. Real 2026 Toronto costs, why only one of them can go over your existing tile, and how to choose without demolishing anything."
+    },
+    {
+      "slug": "concrete-resurfacing-cold-weather-toronto",
+      "title": "Cold Weather Concrete Resurfacing in Toronto: The Window Closes Sooner Than You Think",
+      "category": "Seasonal Tips",
+      "keywords": [
+        "cold weather concrete resurfacing Toronto",
+        "concrete overlay temperature GTA",
+        "fall concrete resurfacing Toronto",
+        "microcement winter Toronto"
+      ],
+      "excerpt": "Cold weather concrete resurfacing in Toronto has a hard cutoff most contractors won't mention. Here are the real temperature limits, the GTA booking deadline, and what happens to an overlay installed three weeks too late."
+    },
+    {
+      "slug": "microcement-ceilings-walls-toronto",
+      "title": "Microcement Ceilings in Toronto: The Seamless Wrap Homeowners Are Asking For",
+      "category": "Interior Trends",
+      "keywords": [
+        "microcement ceiling Toronto",
+        "microcement walls GTA",
+        "seamless microcement Toronto",
+        "microcement cost Toronto"
+      ],
+      "excerpt": "Walls and floors were the easy part — the 2026 move is carrying microcement onto the ceiling so a room reads as one continuous surface. Here is what a microcement ceiling costs in Toronto, where a seamless wrap works, and the mesh reinforcement that keeps it from cracking."
+    },
+    {
+      "slug": "jewelstone-driveway-toronto",
+      "title": "Jewelstone Driveway Resurfacing in Toronto: 2026 Costs, Finishes & Why It Beats a Tear-Out",
+      "category": "Exterior Design",
+      "keywords": [
+        "Jewelstone driveway Toronto",
+        "concrete driveway resurfacing GTA",
+        "decorative concrete driveway Mississauga",
+        "Jewelstone cost Toronto",
+        "driveway overlay Vaughan"
+      ],
+      "excerpt": "A replacement quote on a cracked driveway is usually money spent removing a slab that is still good. Jewelstone driveway resurfacing in Toronto runs 40-60% below replacement, installs in days, and delivers a decorative stone finish. Real 2026 GTA pricing, plus the four cases where we tell homeowners to replace instead."
+    },
+    {
+      "slug": "parging-repair-foundation-toronto",
+      "title": "Parging Repair in Toronto: Why Your Foundation Coating Is Crumbling — and What It Costs to Fix",
+      "category": "How-To Guide",
+      "keywords": [
+        "parging repair Toronto",
+        "foundation parging GTA",
+        "parging cost Toronto",
+        "crumbling parging Mississauga",
+        "foundation wall repair Toronto",
+        "re-parging Toronto"
+      ],
+      "excerpt": "Flaking, bubbling parging isn't cosmetic — it's the sacrificial layer that has already done its job. Here's how to read the damage yourself, real 2026 parging repair costs across Toronto and the GTA, and why the repair window closes in mid-October."
+    },
+    {
+      "slug": "wood-look-concrete-overlay-toronto",
+      "title": "Wood-Look Concrete Overlay in Toronto: The 2026 Cost & Design Guide",
+      "category": "Exterior Design",
+      "keywords": [
+        "wood look concrete overlay Toronto",
+        "wood plank stamped concrete GTA",
+        "concrete deck alternative Toronto",
+        "decorative concrete overlay Toronto"
+      ],
+      "excerpt": "A wood-look concrete overlay gives GTA homeowners the warmth of a cedar deck with none of the rot, warping, or annual staining. See real 2026 Toronto costs, the plank tones selling right now, and where this finish works — and where it doesn't."
+    },
+    {
+      "slug": "spalling-concrete-repair-toronto",
+      "title": "Spalling Concrete Repair in Toronto: Why Your Slab Is Flaking — and What Actually Fixes It",
+      "category": "How-To Guide",
+      "keywords": [
+        "spalling concrete repair Toronto",
+        "flaking concrete GTA",
+        "concrete resurfacing Toronto"
+      ],
+      "excerpt": "Flaking, pitting and scaling concrete is spalling — and in Toronto it's driven by freeze-thaw and de-icing salt. Here's how to tell whether your slab needs a seal, a bonded overlay or full replacement, what spalling concrete repair costs across the GTA in 2026, and why the repair window closes in October."
+    },
+    {
+      "slug": "concrete-sealing-before-winter-toronto",
+      "title": "Concrete Sealing in Toronto: What Freeze-Thaw Really Does to Your Slab — and How to Stop It Before Winter",
+      "category": "Seasonal Tips",
+      "keywords": [
+        "concrete sealing Toronto",
+        "driveway sealing GTA",
+        "freeze thaw concrete damage Ontario",
+        "salt damage concrete Toronto"
+      ],
+      "excerpt": "Ontario puts your concrete through 40–60 freeze-thaw cycles a year, then buries it in road salt. Concrete sealing in Toronto before the first frost costs about 10% of what replacement costs. Here are 2026 prices, the right timing window, and how to tell if your slab is already past sealing."
+    },
+    {
+      "slug": "microcement-bathroom-toronto",
+      "title": "Microcement Bathrooms in Toronto: The Shower Trend Replacing Tile",
+      "category": "Interior Trends",
+      "keywords": [
+        "microcement bathroom Toronto",
+        "microcement shower GTA",
+        "seamless bathroom Toronto"
+      ],
+      "excerpt": "Toronto homeowners are ditching tile for microcement bathrooms in 2026. Seamless, waterproof and stunning — here's what a microcement bathroom costs and why it's worth it across the GTA."
     }
   ]
 }
