@@ -2,18 +2,6 @@
   "_note": "Backlog of planned topics. The writer picks the top unused item. A topic is only removed once its HTML page exists. RULE: never add an entry to blog/posts.json unless blog/<slug>.html is committed in the same change; a manifest entry without a page renders as a 404 card on /blog/. Run blog-automation/check-blog.py before publishing.",
   "topics": [
     {
-      "slug": "concrete-crack-repair-toronto",
-      "title": "Concrete Crack Repair in Toronto: What Actually Fixes a Cracked Slab — and What Just Hides It",
-      "category": "How-To Guide",
-      "keywords": [
-        "concrete crack repair Toronto",
-        "cracked driveway repair GTA",
-        "concrete repair Mississauga",
-        "concrete resurfacing Toronto",
-        "driveway crack sealing Vaughan"
-      ]
-    },
-    {
       "slug": "exposed-aggregate-overlay-toronto",
       "title": "Exposed Aggregate Overlays in Toronto: The 2026 Curb-Appeal Finish That Doesn't Require a New Pour",
       "category": "Exterior Design",

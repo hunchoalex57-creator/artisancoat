@@ -212,7 +212,7 @@
   </url>
   <url>
     <loc>https://artisancoat.ca/blog/index.html</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -327,6 +327,12 @@
   <url>
     <loc>https://artisancoat.ca/blog/microcement-basement-floor-toronto.html</loc>
     <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://artisancoat.ca/blog/concrete-crack-repair-toronto.html</loc>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
