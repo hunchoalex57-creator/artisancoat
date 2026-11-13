@@ -2,19 +2,6 @@
   "_note": "Backlog of planned topics. The writer picks the top unused item. A topic is only removed once its HTML page exists. RULE: never add an entry to blog/posts.json unless blog/<slug>.html is committed in the same change; a manifest entry without a page renders as a 404 card on /blog/. Run blog-automation/check-blog.py before publishing.",
   "topics": [
     {
-      "slug": "exposed-aggregate-overlay-toronto",
-      "title": "Exposed Aggregate Overlays in Toronto: The 2026 Curb-Appeal Finish That Doesn't Require a New Pour",
-      "category": "Exterior Design",
-      "keywords": [
-        "exposed aggregate overlay Toronto",
-        "exposed aggregate driveway GTA",
-        "decorative concrete Toronto",
-        "Jewelstone Toronto",
-        "concrete resurfacing Mississauga",
-        "aggregate walkway Vaughan"
-      ]
-    },
-    {
       "slug": "stamped-concrete-overlay-toronto",
       "title": "Stamped Concrete Overlays in Toronto: 2026 Patterns, Costs & Why They're Replacing Pavers",
       "category": "Exterior Design",
