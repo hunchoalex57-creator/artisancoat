@@ -2,19 +2,6 @@
   "_note": "Backlog of planned topics. The writer picks the top unused item. A topic is only removed once its HTML page exists. RULE: never add an entry to blog/posts.json unless blog/<slug>.html is committed in the same change; a manifest entry without a page renders as a 404 card on /blog/. Run blog-automation/check-blog.py before publishing.",
   "topics": [
     {
-      "slug": "stamped-concrete-overlay-toronto",
-      "title": "Stamped Concrete Overlays in Toronto: 2026 Patterns, Costs & Why They're Replacing Pavers",
-      "category": "Exterior Design",
-      "keywords": [
-        "stamped concrete overlay Toronto",
-        "decorative concrete GTA",
-        "stamped concrete patio Toronto",
-        "concrete resurfacing Mississauga",
-        "stamped concrete driveway Toronto"
-      ],
-      "image": "images/stamped-concrete-overlay-process-toronto.jpg"
-    },
-    {
       "slug": "concrete-balcony-resurfacing-toronto",
       "title": "Concrete Balcony Resurfacing in Toronto: 2026 Costs, Coatings & the Repair Window That Closes in October",
       "category": "Exterior Design",
