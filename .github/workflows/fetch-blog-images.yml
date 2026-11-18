@@ -1,0 +1,31 @@
+name: fetch-blog-images
+on:
+  push:
+    paths:
+      - .github/workflows/fetch-blog-images.yml
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download images
+        run: |
+          set -e
+          mkdir -p images/blog
+          curl -fsSL -o images/blog/cold-weather-concrete-pouring-toronto-hero.jpg 'https://export-download.canva.com/eVWR0/DAHbRBeVWR0/-1/0/0002-6107403657090780514.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUH4R7NKVBA%2F20261117%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261117T224340Z&X-Amz-Expires=54266&X-Amz-Signature=fae58d4dc3b79d8922e71fb53a42a2f931cdfe6930502db19e515701f96caecf&X-Amz-SignedHeaders=host%3Bx-amz-expected-bucket-owner&response-expires=Wed%2C%2018%20Nov%202026%2013%3A48%3A06%20GMT'
+          curl -fsSL -o images/blog/concrete-pour-steam-cold-morning-mississauga.jpg 'https://export-download.canva.com/eVWR0/DAHbRBeVWR0/-1/0/0003-6107403657090780514.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUH4R7NKVBA%2F20261118%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261118T090210Z&X-Amz-Expires=16502&X-Amz-Signature=f586e8b2ea31b2154ce1f06c4bff8dd4c84ecc6d211e50034ddc2e1f305b1794&X-Amz-SignedHeaders=host%3Bx-amz-expected-bucket-owner&response-expires=Wed%2C%2018%20Nov%202026%2013%3A37%3A12%20GMT'
+          curl -fsSL -o images/blog/heated-enclosure-winter-concrete-pour-gta.jpg 'https://export-download.canva.com/eVWR0/DAHbRBeVWR0/-1/0/0004-6107403657090780514.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUH4R7NKVBA%2F20261118%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261118T013030Z&X-Amz-Expires=45431&X-Amz-Signature=13fcd43080f4d8ee63a518238910cd6e716e6fe0b4df53cdc93fd343639b5a77&X-Amz-SignedHeaders=host%3Bx-amz-expected-bucket-owner&response-expires=Wed%2C%2018%20Nov%202026%2014%3A07%3A41%20GMT'
+          curl -fsSL -o images/blog/frozen-concrete-surface-scaling-texture-toronto.jpg 'https://export-download.canva.com/eVWR0/DAHbRBeVWR0/-1/0/0005-6107403657090780514.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUH4R7NKVBA%2F20261117%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261117T185239Z&X-Amz-Expires=67988&X-Amz-Signature=f02aca9dd284ffe253fb2b6b7dad7238fb8e44c1b29e3de54c06a09034be360e&X-Amz-SignedHeaders=host%3Bx-amz-expected-bucket-owner&response-expires=Wed%2C%2018%20Nov%202026%2013%3A45%3A47%20GMT'
+          for f in images/blog/cold-weather-concrete-pouring-toronto-hero.jpg images/blog/concrete-pour-steam-cold-morning-mississauga.jpg images/blog/heated-enclosure-winter-concrete-pour-gta.jpg images/blog/frozen-concrete-surface-scaling-texture-toronto.jpg; do
+            file "$f" | grep -q JPEG || { echo "not a JPEG: $f"; file "$f"; exit 1; }
+          done
+          ls -la images/blog
+      - name: Commit images
+        run: |
+          git config user.name "hunchoalex57-creator"
+          git config user.email "hunchoalex57@gmail.com"
+          git add images/blog/*.jpg
+          git commit -m "Add images for cold-weather concrete pouring post"
+          git push
